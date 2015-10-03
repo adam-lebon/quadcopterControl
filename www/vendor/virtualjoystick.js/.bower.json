@@ -1,0 +1,14 @@
+{
+  "name": "virtualjoystick.js",
+  "homepage": "https://github.com/jeromeetienne/virtualjoystick.js",
+  "_release": "454aab61d1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "454aab61d1df0a2cbb549f982c7e06b1c57fe419"
+  },
+  "_source": "git://github.com/jeromeetienne/virtualjoystick.js.git",
+  "_target": "*",
+  "_originalSource": "virtualjoystick.js",
+  "_direct": true
+}

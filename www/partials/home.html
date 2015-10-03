@@ -1,0 +1,6 @@
+<div class="center">
+	<md-button ng-href="#fly" class="navigationStart md-raised md-accent" flex ng-disabled="!ws.opened">Lancer la navigation</md-button>
+	<p class="md-warn" ng-show="ws.readyState == 3">La connexion au drone a échoué</p>
+	<md-button class="md-primary" flex ng-show="ws.readyState == 3" ng-click="reconect()">Se reconecter</md-button>
+	<div layout="row"><p class="md-warn" ng-show="ws.readyState == 0">Connexion en cours ...</p><!--<md-progress-circular class="md-hue-2" md-mode="indeterminate" md-diameter="20"></md-progress-circular>--></div>
+</div>

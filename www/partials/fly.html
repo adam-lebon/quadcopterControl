@@ -1,0 +1,31 @@
+<div ng-controller="JoystickController">
+	<h3>Fly</h3>
+	{{joystickLeft._stickX}}
+	{{joystickLeft._baseX}}
+
+	<!--<p>
+		<ul>
+			<li>X : {{ leftJoystick.deltaX }}px</li>
+			<li>Y : {{ leftJoystick.deltaY }}px</li>
+		</ul>
+	</p>
+	-->
+	<div id="leftJoystickOverlay"></div>
+	<div id="rightJoystickOverlay"></div>
+<!--
+	<div class="joystick joystickContainer" style="left: {{ leftJoystick.pointers[0].clientX - 75 - $scope.LJOvelay.fromLeft - leftJoystick.deltaX }}px; top: {{leftJoystick.pointers[0].clientY - 75 - LJOvelay.fromTop - leftJoystick.deltaY }}px;">
+		<div class="joystickBall" style="
+			margin-left: {{ ((leftJoystick.deltaX<60)?leftJoystick.deltaX+75-15:120-leftJoystick.deltaY) }}px;
+			margin-top: {{ ((leftJoystick.deltaY < 75)?leftJoystick.deltaY+75-15:'120')}}px;
+		"></div>
+		<div class="joystickBall" style="
+			margin-left: {{ leftJoystick.marginLeft }}px;
+			margin-top: {{ leftJoystick.deltaY+75-15 }}px;
+		"></div>
+	</div>
+	->{{ leftJoystick.deltaX*leftJoystick.deltaX + leftJoystick.deltaY*leftJoystick.deltaY }}</br>
+	->{{ 60*60 }}</br>
+	tan({{ round(leftJoystick.angle) }}) = {{ tan(round(leftJoystick.angle)*180/PI) }} </br>
+	->Z = 75 / {{ tan(round(leftJoystick.angle)) }} = {{ 75/tan(round(leftJoystick.angle)) }}
+	{{ tan(28) }}-->
+</div>

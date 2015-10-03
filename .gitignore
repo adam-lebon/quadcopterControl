@@ -1,0 +1,7 @@
+.vagrant
+.vagrant/*
+node_modules
+node_modules/*
+
+/platforms
+/plugins

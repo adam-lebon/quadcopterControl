@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/angular-material/angular-material.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>Hello World</title>
+	</head>
+	<body ng-app="app" ng-controller="AppController">
+		<div layout="column" layout-fill>
+			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2>S<span>A</span>MV</h2>
+					<span flex></span>
+					<md-button class="notification md-icon-button" ng-show="system.information.usb.length != 0" ng-click="record()">
+						<img src="img/usb-icon.png" />
+						<img src="img/recording-pins.png" class="pins blind" ng-show="system.information.record" />
+					</md-button>
+					<md-button class="notification md-icon-button" ng-show="ws.opened" ng-click="record()">
+						<img src="img/video-icon.png" />
+						<img src="img/recording-pins.png" class="pins blind" ng-show="system.information.record" />
+					</md-button>
+					<md-button class="notification md-icon-button">
+						<img src="img/drone-icon.png" />
+						<img src="img/x-mark-icon.png" class="pins" ng-show="!ws.opened" />
+						<img src="img/check-mark-icon.png" class="pins" ng-show="ws.opened" />
+					</md-button>
+					<md-button class="notification md-icon-button">
+						<img src="img/wireless-icon.png" />
+					</md-button>
+				</div>
+			</md-toolbar>
+			{{ system }} ----->{{ system.information.usb.length }}|------
+			<md-content ng-view>
+				
+			</md-content>
+		</div>
+
+		<footer>
+			<span class="deviceState" ng-class="{ ready: deviceState=='ready'}"><b>Device:</b> {{ system.deviceState }}</span> | 
+			<span class="wifi">Wifi: {{ system.wifi.state }}</span>
+        </footer>
+		
+		<script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="vendor/angular/angular.js"></script>
+		<script type="text/javascript" src="vendor/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src="vendor/angular-touch/angular-touch.js"></script>
+		<script type="text/javascript" src="vendor/angular-animate/angular-animate.js"></script>
+		<script type="text/javascript" src="vendor/angular-aria/angular-aria.js"></script>
+		<script type="text/javascript" src="vendor/angular-material/angular-material.js"></script>
+		<script type="text/javascript" src="vendor/ngCordova/dist/ng-cordova.js"></script>
+		<script type="text/javascript" src="vendor/virtualjoystick.js/virtualjoystick.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/AppController.js"></script>
+		<script type="text/javascript" src="js/JoystickController.js"></script>
+	</body>
+</html>
